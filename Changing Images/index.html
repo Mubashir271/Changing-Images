@@ -1,0 +1,44 @@
+<head>
+  <title>
+    Changing of Images 
+  </title>
+  <h1>Changing the Image</h1>
+  <img src="img1.jpg" id="myImage" class="myImage">
+  <input class="Click" type="button" onclick="changeImage()" value="Change" />
+
+  <style>
+    .myImage{
+      width: 400px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .Click{
+      width: 100px;
+      height: 50px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .Click:hover{
+      cursor: pointer;
+  
+    }
+  </style>
+</head>
+    <p>Click on the "Change" button to Change Images</p>
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("img2")) {
+                image.src = "img1.jpg" ;
+            }
+            else if(image.src.match("img1")){
+              image.src = "img3.jpg";
+            }
+            else {
+                image.src = "img2.jpg";
+            }
+            
+        }
+    </script>
